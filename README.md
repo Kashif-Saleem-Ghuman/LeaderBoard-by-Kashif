@@ -25,17 +25,13 @@
   - [🙏 Acknowledgments ](#-acknowledgments-)
   - [📝 License ](#-license-)
 
-# 📖 Add to List app<a name="about-project"></a>
+# 📖 Leaderboard App<a name="about-project"></a>
 
-**Add to list app* is a web app that allows you to add tasks, edit, delete and mark tasks as completed. 
+**Leaderboard app* is a web app that allows you to add your name and scores to the leaderboard. 
 
 Here are some features of the page:
 
-Add a task to you to do list.
-Remove a task from your to do list.
-Store your data history in the browser's local storage.
-
-
+Add your name and score to the leaderboard.
 
 
 ## 🛠 Built With <a name="built-with"></a>
@@ -50,7 +46,7 @@ Store your data history in the browser's local storage.
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-[To do list](https://kashif-saleem-ghuman.github.io/To-do-list-by-Kashif/dist/)
+none
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -59,9 +55,9 @@ Store your data history in the browser's local storage.
 
 - Create a local directory that you want to clone the repository.
 
-- On the terminal navigate to the folder you created and run this command: git clone https://github.com/Kashif-Saleem-Ghuman/To-do-list-by-Kashif.git
+- On the terminal navigate to the folder you created and run this command: git clone https://github.com/Kashif-Saleem-Ghuman/LeaderBoard-by-Kashif.git
 
-- Now navigate to the repository folder using command prompt cd To-do-list-by-Kashif.
+- Now navigate to the repository folder using command prompt cd LeaderBoard-by-Kashif.
 
 - Make sure to intall linters using this link: https://github.com/microverseinc/linters-config.
 
@@ -88,9 +84,9 @@ Clone this repository to your desired folder:
 
 - Open the command prompt/terminal and navigate to the created directory.
 
-- On the terminal run this command git clone https://github.com/Kashif-Saleem-Ghuman/To-do-list-by-Kashif.git.
+- On the terminal run this command git clone https://github.com/Kashif-Saleem-Ghuman/LeaderBoard-by-Kashif.git.
 
-- Go to the repository folder using command prompt cdTo-do-list-by-Kashif.git.
+- Go to the repository folder using command prompt cdTo-LeaderBoard-by-Kashif.
 
 
 - Make sure to intall linters using this link: https://github.com/microverseinc/linters-config.
@@ -115,7 +111,7 @@ Clone this repository to your desired folder:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- Implement some UX improvements: To dynamically add and remove tasks.
+- Implement some UX improvements: To dynamically add and remove names and scores using the Leaderboard API.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -137,14 +133,13 @@ Give a ⭐️ if you like this project!
 
 [Webpack](https://webpack.js.org/))
 
-[Youtube](https://www.youtube.com/watch?v=IZGNcSuwBZs&list=PLG1N99wX8hQVtD370HuFavTxPUUY9Ol0K&index=1))
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](https://github.com/Kashif-Saleem-Ghuman/To-do-list-by-Kashif/blob/main/LICENSE) licensed.
+This project is [MIT](https://github.com/Kashif-Saleem-Ghuman/LeaderBoard-by-Kashif/blob/main/LICENSE) licensed.
 
 _NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
 
