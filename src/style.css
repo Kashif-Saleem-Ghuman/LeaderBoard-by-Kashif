@@ -1,12 +1,5 @@
-body {
-  background-color: bisque;
-}
-
-.hello {
-  color: red;
-}
-
-h1 {
-  color: brown;
-  font-family: sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
