@@ -18,6 +18,7 @@
       "js": "always", "json": "always"
     }]
   },
+  "import/no-unresolved": "off",
   "ignorePatterns": [
     "dist/",
     "build/"
