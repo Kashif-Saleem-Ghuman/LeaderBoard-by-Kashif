@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leader board by Kashif</title>
+    <link
+      rel="stylesheet"
+      href="https://bootswatch.com/5/yeti/bootstrap.min.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <h1 class="text-dark fw-bold ms-5 mt-3">Leaderboard</h1>
+    </header>
+
+    <main>
+      <section class="table-container d-flex">
+        
+        <table
+          class="table table-striped w-50 mt-3 ms-5 "
+        >
+          <thead class="">
+            <tr class="">
+              <th class="display-6 ">Recent scores</th>
+              <th>
+                <button class="btn btn-outline-dark" type="button">Refresh</button>
+              </th>
+            </tr>
+          </thead>
+
+          <tbody class="table">
+            <tr>
+              <td>Kashif:</td>
+              <td>100</td>
+            </tr>
+            <tr>
+              <td>Saleem:</td>
+              <td>80</td>
+            </tr>
+            <tr>
+              <td>Obaid:</td>
+              <td>50</td>
+            </tr>
+            <tr>
+              <td>Iqbal:</td>
+              <td>90</td>
+            </tr>
+            <tr>
+              <td>John:</td>
+              <td>50</td>
+            </tr>
+            <tr>
+              <td>Ted:</td>
+              <td>49</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <article class="mt-4 ms-3 me-5 d-flex flex-column w-25">
+          <h2>Add your score here</h2>
+          <input class="mt-3" type="text" id="text" placeholder="Your name" />
+          <input class="mt-3" type="text" id="text" placeholder="Your Score" />
+          <div class="d-flex justify-content-end mt-3">
+            <button type="submit" class="btn btn-outline-dark">Submit</button>
+          </div>
+          
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
