@@ -119,7 +119,7 @@ Clone this repository to your desired folder:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Kashif-Saleem-Ghuman/To-do-list-by-Kashif/issues).
+Feel free to check the [issues page](https://github.com/Kashif-Saleem-Ghuman/LeaderBoard-by-Kashif/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -140,8 +140,6 @@ Give a ⭐️ if you like this project!
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](https://github.com/Kashif-Saleem-Ghuman/LeaderBoard-by-Kashif/blob/main/LICENSE) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
