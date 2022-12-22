@@ -1,26 +1,21 @@
-class UI {
-  constructor() {
-    this.list = document.querySelector('.score-list');
-    this.nameInput = document.querySelector('#name');
-    this.scoreInput = document.querySelector('#score');
-  }
+import getScore from './getFromAPi.js';
 
-  addToUI(arr) {
-    this.list.innerHTML = '';
-    arr.forEach((el) => {
-      this.list.innerHTML += `
-      <tr>
-        <td>${el.user}:</td>
-        <td>${el.score}</td>
-      </tr>
-          `;
-    });
-  }
+const scoreBoard = document.querySelector('.score-list');
 
-  clearInputs() {
-    this.nameInput.value = '';
-    this.scoreInput.value = '';
-  }
-}
+const UI = async () => {
+  scoreBoard.innerHTML = '';
+  const Arr = await getScore();
+  Arr.sort((a, b) => b.score - a.score);
+  let id = 1;
+  Arr.forEach((el) => {
+    scoreBoard.innerHTML += `
+    <tr>
+         <td>${el.user}:</td>
+         <td>${el.score}</td>
+   </tr>
+    `;
+    id += 1; // increment the id
+  });
+};
 
 export default UI;

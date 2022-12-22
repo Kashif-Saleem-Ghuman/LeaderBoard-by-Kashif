@@ -1,40 +1,22 @@
-import './style.css';
-import Leaderboard from './modules/leaderboard.js';
+import postScore from './modules/PostTOAPi.js';
 import UI from './modules/Ui.js';
+import './style.css';
 
-const nameInput = document.querySelector('#name');
-const scoreInput = document.querySelector('#score');
 const refresh = document.querySelector('.refresh-btn');
 const addForm = document.querySelector('form');
 
-// instantiating the leaderboard and UI classes
-const leaderboard = new Leaderboard();
-const userInterface = new UI();
+UI();
 
-// declaring an empty game id variable
-let gameId;
+refresh.addEventListener('click', UI);
 
-// using the startGame method from the leaderboard class to create a new game
-
-const initiateGame = () => {
-  leaderboard
-    .startGame('Term Project')
-    .then((res) => res.result.split(' '))
-    .then((data) => {
-      [gameId] = [data[3]];
-    });
-};
-
-const getScores = () => {
-  leaderboard.getScores(gameId).then((response) => userInterface.addToUI(response.result));
-};
-const postScore = (e) => {
+addForm.onsubmit = (e) => {
   e.preventDefault();
-
-  leaderboard.postScore(gameId, nameInput.value, scoreInput.value);
-  userInterface.clearInputs();
+  let nameValue = document.querySelector('#name').value;
+  const number = document.querySelector('#score').value;
+  nameValue = nameValue.slice(0, 1).toUpperCase() + nameValue.slice(1).toLowerCase();
+  postScore({
+    user: nameValue,
+    score: number,
+  });
+  addForm.reset();
 };
-
-document.addEventListener('DOMContentLoaded', initiateGame);
-addForm.addEventListener('submit', postScore);
-refresh.addEventListener('click', getScores);
