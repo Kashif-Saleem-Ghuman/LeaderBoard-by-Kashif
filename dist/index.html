@@ -25,12 +25,12 @@
             <tr class="">
               <th class="display-6 ">Recent scores</th>
               <th>
-                <button class="btn btn-outline-dark" type="button">Refresh</button>
+                <button class="btn btn-outline-dark refresh-btn" type="button">Refresh</button>
               </th>
             </tr>
           </thead>
 
-          <tbody class="table">
+          <tbody class="table score-list">
             <tr>
               <td>Kashif:</td>
               <td>100</td>
@@ -58,15 +58,17 @@
           </tbody>
         </table>
 
-        <article class="mt-4 ms-3 me-5 d-flex flex-column w-25">
+
+        <div id="validation"></div>
+        <form class="mt-4 ms-3 me-5 d-flex flex-column w-25">
           <h2>Add your score here</h2>
-          <input class="mt-3" type="text" id="text" placeholder="Your name" />
-          <input class="mt-3" type="text" id="text" placeholder="Your Score" />
+          <input id="name" class="mt-3" type="text" id="text" placeholder="Your name" />
+          <input id="score" class="mt-3" type="text" id="text" placeholder="Your Score" />
           <div class="d-flex justify-content-end mt-3">
-            <button type="submit" class="btn btn-outline-dark">Submit</button>
+            <button type="submit" class="btn btn-outline-dark" id="submit-btn">Submit</button>
           </div>
           
-        </article>
+        </form>
       </section>
     </main>
   </body>

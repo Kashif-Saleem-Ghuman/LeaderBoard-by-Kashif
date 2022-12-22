@@ -115,7 +115,27 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\n\n//# sourceURL=webpack://webpack_setup_kashif/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _modules_leaderboard_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/leaderboard.js */ \"./src/modules/leaderboard.js\");\n/* harmony import */ var _modules_Ui_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/Ui.js */ \"./src/modules/Ui.js\");\n\n\n\n\nconst nameInput = document.querySelector('#name');\nconst scoreInput = document.querySelector('#score');\nconst refresh = document.querySelector('refresh-btn');\nconst addForm = document.querySelector('form');\n\n// instantiating the leaderboard and UI classes\nconst leaderboard = new _modules_leaderboard_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"]();\nconst userInterface = new _modules_Ui_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"]();\n\n// declaring an empty game id variable\nlet gameId;\n\n// using the startGame method from the leaderboard class to create a new game\n\nconst initiateGame = () => {\n  leaderboard.startGame('My cool new game')\n    .then((res) => res.result.split(''))\n    .then((data) => {\n      [gameId] = [data[3]];\n    });\n};\n\nconst getScores = () => {\n  leaderboard.getScores(gameId).then((response) => userInterface.addToUI(response.result));\n};\nconst postScore = (e) => {\n  e.preventDefault();\n\n  leaderboard.postScore(gameId, nameInput.value, scoreInput.value);\n  userInterface.clearInputs();\n};\n\ndocument.addEventListener('DOMContentLoaded', initiateGame);\naddForm.addEventListener('submit', postScore);\nrefresh.addEventListener('click', getScores);\n\n//# sourceURL=webpack://webpack_setup_kashif/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/modules/Ui.js":
+/*!***************************!*\
+  !*** ./src/modules/Ui.js ***!
+  \***************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nclass UI {\n  constructor() {\n    this.list = document.querySelector('.score-list');\n    this.nameInput = document.querySelector('#name');\n    this.scoreInput = document.querySelector('#score');\n  }\n\n  addToUI(arr) {\n    this.list.innerHTML = '';\n    arr.forEach((el) => {\n      this.list.innerHTML += `\n      <tr>\n        <td>${el.user}:</td>\n        <td>${el.score}</td>\n      </tr>\n          `;\n    });\n  }\n\n  clearInputs() {\n    this.nameInput.value = '';\n    this.scoreInput.value = '';\n  }\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (UI);\n\n\n//# sourceURL=webpack://webpack_setup_kashif/./src/modules/Ui.js?");
+
+/***/ }),
+
+/***/ "./src/modules/leaderboard.js":
+/*!************************************!*\
+  !*** ./src/modules/leaderboard.js ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nclass Leaderboard {\n  constructor() {\n    this.url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/';\n  }\n\n  async startGame(gameName) {\n    const responseStart = await fetch(this.url, {\n      method: 'POST',\n      body: JSON.stringify({\n        name: gameName,\n      }),\n      headers: {\n        'Content-type': 'application/json; charset=UTF-8',\n      },\n    });\n\n    const responseData = await responseStart.json();\n    return responseData;\n  }\n\n  async getScores(gameId) {\n    const responseStart = await fetch(`${this.url}${gameId}/scores/`);\n    const responseData = await responseStart.json();\n    return responseData;\n  }\n\n  async postScore(gameId, name, score) {\n    if (name === '' || score === '') {\n      alert('Please provide all information')\n      // document.getElementById('validation').textContent = 'Please input all fields';\n    }\n    const responseStart = await fetch(`${this.url}${gameId}/scores/`, {\n      method: 'POST',\n      body: JSON.stringify({\n        user: name,\n        score,\n      }),\n      headers: {\n        'Content-type': 'application/json; charset=UTF-8',\n      },\n    });\n\n    const responseData = await responseStart.json();\n    return responseData;\n  }\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Leaderboard);\n\n\n//# sourceURL=webpack://webpack_setup_kashif/./src/modules/leaderboard.js?");
 
 /***/ })
 
