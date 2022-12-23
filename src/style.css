@@ -3,3 +3,21 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+html {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  border-radius: 5px;
+  width: 80%;
+  height: 95vh;
+  position: absolute;
+  top: 2.5%;
+  background-image: url(https://thumbs.gfycat.com/EthicalPerfumedAsiaticwildass-size_restricted.gif), url(https://i.pinimg.com/originals/75/d3/bd/75d3bd6c2855cea6bd12af66cc37719b.gif);
+  background-repeat: no-repeat, no-repeat;
+  background-position: 74% 77%, 25% 2%;
+  background-size: 25%, 10%;
+}
