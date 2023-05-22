@@ -1,11 +1,9 @@
 <a name="readme-top"></a>
 
 <div align="center">
+ 
 
-  <img src="./src/images/murple_logo.png" alt="logo" width="140"  height="auto" />
-  <br/>
-
-  <h3><b>Microverse README Template</b></h3>
+  <h3><b>LEADER BOARD APP</b></h3>
 
 </div>
 
@@ -99,12 +97,14 @@ Clone this repository to your desired folder:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 👤**Authors** <a name="authors"></a>
-<h4>Kashif Saleem</h4>
+## 👥 Authors <a name="authors"></a>
 
-- GitHub: [@githubhandle](https://github.com/Kashif-Saleem-Ghuman)
-- Twitter: [@twitterhandle](https://twitter.com/Kashif14Saleem)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/kashif-saleem-45ba95215/)
+👤 **Kashif Saleem**
+
+- GitHub:[![Kashif](https://img.shields.io/badge/-Kashif-white?logo=GitHub&logoColor=181717&style=plastic)](https://github.com/Kashif-Saleem-Ghuman)
+- Twitter:[![Kashif](https://img.shields.io/badge/-Kashif-blue?logo=Twitter&logoColor=skyBlue&style=plastic)](https://twitter.com/Kashif14Saleem)
+- LinkedIn:[![Kashif](https://img.shields.io/badge/-Kashif-white?logo=LinkedIn&logoColor=181717&style=plastic)](https://www.linkedin.com/in/kashifsaleemghuman/)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
